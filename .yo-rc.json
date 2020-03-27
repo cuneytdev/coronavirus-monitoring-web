@@ -1,0 +1,22 @@
+{
+  "generator-ngx-rocket": {
+    "version": "6.0.1",
+    "props": {
+      "location": "path",
+      "appName": "coronavirus monitoring",
+      "target": ["web"],
+      "pwa": true,
+      "ui": "material",
+      "layout": "side-menu",
+      "auth": false,
+      "lazy": true,
+      "angulartics": false,
+      "tools": ["prettier", "hads"],
+      "utility": ["lodash", "moment"],
+      "projectName": "coronavirus-monitoring",
+      "packageManager": "npm",
+      "mobile": [],
+      "desktop": []
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="world-total">
+    <div class="world-total-item">
+      <mat-card>
+        <div class="total-amount">
+          {{ worldTotal?.total_cases }}
+          <span>{{ 'total cases' }}</span>
+        </div>
+        <i style="color:#ef2626" class="fas fa-skull-crossbones"></i>
+        <div class="amount">
+          {{ worldTotal?.total_deaths }}
+          <span>{{ 'total deaths' }}</span>
+        </div>
+      </mat-card>
+    </div>
+    <div class="world-total-item">
+      <mat-card>
+        <div class="total-amount">
+          {{ worldTotal?.total_cases }}
+          <span>{{ 'total cases' }}</span>
+        </div>
+        <i style="color:#18b518" class="fas fa-heartbeat"></i>
+        <div class="amount">
+          {{ worldTotal?.total_recovered }}
+          <span>{{ 'total recovered' }}</span>
+        </div>
+      </mat-card>
+    </div>
+    <div class="world-total-item">
+      <mat-card>
+        <div class="total-amount">
+          {{ worldTotal?.new_cases }}
+          <span>{{ 'total new cases' }}</span>
+        </div>
+        <i style="color: #6666ea" class="fas fa-info-circle"></i>
+        <div class="amount">
+          {{ worldTotal?.new_deaths }}
+          <span>{{ 'total new deaths' }}</span>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+
+  <mat-card style="margin: 10px">
+    <div class="updated-at-info">{{ 'Last updated at ' + lastUpdatedAt }}</div>
+    <div *ngFor="let country of countries" (click)="onSelect(country)" class="line-container">
+      <div class="line" [ngStyle]="applyStyles(country?.value)">
+        <div class="line-label">
+          {{ country?.name }}
+        </div>
+        <span class="amount-death">
+          {{ country.value
+          }}<span>
+            {{ ' deaths' }} </span
+          >{{ ' / ' }}{{ country?.cases
+          }}<span>
+            {{ ' cases' }}
+          </span>
+        </span>
+      </div>
+    </div>
+  </mat-card>
+</div>

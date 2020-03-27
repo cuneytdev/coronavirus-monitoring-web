@@ -1,0 +1,96 @@
+.container {
+  text-align: center;
+  padding: 1em;
+  & .world-total {
+    display: flex;
+    flex-wrap: wrap;
+    & .world-total-item {
+      flex-grow: 2;
+      width: 260px;
+      padding: 10px;
+      position: relative;
+      & .mat-card {
+        height: 115px;
+        i {
+          position: absolute;
+          right: 20px;
+          font-size: 2.5rem;
+        }
+      }
+      & .total-amount {
+        position: absolute;
+        font-size: 1rem;
+        left: 17px;
+        color: #8c7f7f;
+        & span {
+          font-size: 0.6rem;
+        }
+      }
+      & .amount {
+        position: absolute;
+        bottom: 10px;
+        font-size: 1.5rem;
+        color: #8c7f7f;
+        font-weight: 600;
+        & span {
+          font-size: 0.8rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  & .updated-at-info {
+    font-size: 0.7rem;
+    display: flex;
+    padding: 0 10px;
+    font-style: italic;
+  }
+  & .line-container {
+    border: 1px solid #8c7f7f;
+    border-radius: 5px;
+    margin: 10px;
+    position: relative;
+    &:hover {
+      transition: all 0.5s ease-in-out;
+      border-color: black;
+      cursor: pointer;
+      background-color: #d6d6d6;
+    }
+    & .line {
+      width: 0%;
+      overflow: hidden;
+      font-size: 1rem;
+      display: flex;
+      height: 40px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      & .line-label {
+        display: flex;
+        padding: 8px 10px;
+        position: absolute;
+        font-weight: 600;
+      }
+
+      & .amount-death {
+        position: absolute;
+        right: 0;
+        padding: 8px;
+        font-weight: 600;
+        & span {
+          font-weight: 300;
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  width: 150px;
+  margin: 0 auto;
+}
+
+q {
+  font-style: italic;
+  quotes: "« " " »";
+}
