@@ -8,9 +8,9 @@ import { CountryComponent } from '@app/home/country/country.component';
 
 const routes: Routes = [
   Shell.childRoutes([
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '', redirectTo: '/statistics', pathMatch: 'full' },
     { path: 'statistics', component: HomeComponent, data: { title: extract('Coronavirus Statistics') } },
-    { path: 'statistics/:country', component: CountryComponent, data: { title: extract('Country') } }
+    { path: 'statistics/:country', component: CountryComponent, data: { title: extract('Country Detail') } }
   ])
 ];
 
